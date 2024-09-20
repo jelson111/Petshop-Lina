@@ -1,0 +1,712 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    height: 100dvh;
+    background-image: url(fotos/raça3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+li{
+    list-style: none;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navba{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.navba .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+
+.navba .Links{
+    display: flex;
+    gap: 2em;
+}
+
+ .action_btn{
+    background-color: rgba(92, 66, 30, 0.823);
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.navba .Tongle_btn{
+   color: white;
+   display: none;
+   cursor: pointer;
+   font-size: 1.5rem;
+}
+
+.action_btn:hover{
+    scale: 1.05;
+    color: white;
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    height: 0;
+    top: 60px;
+    width: 300px;
+    background: rgb(255, 255, 255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    transition: height .2s cubic-bezier(0.175,0.885,0.32,1.275);
+    
+
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width:992px) {
+
+    .navba .Links,
+    .navba .action_btn{
+        display: none;
+    }
+    .navba .Tongle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+
+    }
+
+}
+
+@media (max-width:576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+        
+    }
+
+}
+/*------------------------------------Css da primeira sessao---------------------------------*/
+section{
+    position: relative;
+    top: 940px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+/*___________________________Animaçao_______________________________*/
+
+section .animate{
+    transition: 2s;
+}
+
+.sec-1 .animate{
+    transform: translateX(-100%);
+
+}
+
+.sec-1.show-animate .animate{
+    transform: translateX(0);
+    
+}
+.texto_2.animate{
+    transform: translateX(100%);
+}
+/*___________________________ Fim Animaçao_______________________________*/
+.Conteudo_1{
+   width: 100%;
+}
+
+.Conteudo_1 .Titulo p{
+    position: relative;
+    top: -10px;
+    font-size: 25px;
+    font-weight: 400; 
+    color: rgba(92, 66, 30, 0.823);
+}
+.texto{
+    position: relative;
+    color: black;
+    text-justify: auto;
+    justify-items: center;
+    width: 100%;
+}
+.texto p{
+    position: relative;
+    text-justify: auto;
+}
+.imagem_solo{
+    position: relative;
+    top: 20px;
+}
+
+.imagem_solo img{
+    position: relative;
+    width: 445px;
+    height: 220px;
+}
+.imagem_solo_2{
+    position: relative;
+    top: 80px;
+    width: 100%;
+    height: 400px;
+}
+.imagem_solo_2 img{
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+.texto_2 p{
+    position: relative;
+    text-justify: auto;
+    top: 140px;
+}
+.texto_2{
+    margin-top: 10px;
+    position: relative;
+    color: black;
+    text-justify: auto;
+    width: 100%;
+}
+.Button{
+    display: flex;
+    position: relative;
+    top: 140px;
+    align-items: center;
+    justify-content: center;
+}
+.Button button{
+    width: 215px;
+    height: 37px;
+    border-radius: 8px;
+    background-color: rgb(63, 57, 43);
+    color: white;
+}
+/*------------------------------Responsividade da Primeira sessao-------------------------------*/
+@media screen and (max-width:500px){
+    section{
+        position: relative;
+        top: 570px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }   
+}
+@media screen and (max-width:512px){
+    .imagem_solo{
+        position: relative;
+        top: 20px;
+        width: 100%;
+    }
+    
+    .imagem_solo img{
+        position: relative;
+        width: 100%;
+        height: 220px;
+    }
+}
+
+/*------------------------------------Fim Primeira Sessa---------------------------------------*/
+/*###################################################################################################*/
+
+/*-------------------------------------Css Segunda Sessao-------------------------------*/
+.segunda_section{
+    position: relative;
+    top: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    background-color: #d7d7d786;
+}
+/*___________________________Animaçao_______________________________*/
+
+section .animate{
+    transform: scale(.4);
+}
+
+.segunda_section.show-animate .animate{
+    transform: scale(1);
+    
+}
+
+/*___________________________ Fim Animaçao_______________________________*/
+.segunda_section .conten_segunda_section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.segunda_section .quadro_info{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+.segunda_section .quadro_info .Imagem_1 img{
+    width: 440px;
+    height: 160px;
+    margin: 8px;
+}
+.segunda_section .quadro_info #img_3 img{
+    position: relative;
+    left: 10px;
+}
+
+.segunda_section .Texto_card{
+    position: relative;
+    width: 440px;
+    height: 160px;
+    border-bottom: 1px solid rgba(92, 66, 30, 0.823);
+}
+.segunda_section .Texto_card p{
+    position: relative;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: -10px;
+}
+.segunda_section .bottom_quadro{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.segunda_section  .bottom_quadro button{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(63, 57, 43);
+    color: white;
+    border-radius: 8px;
+}
+/*------------------------------Responsividade da Segunda sessao-------------------------------*/
+@media screen and (max-width:959px) {
+    .segunda_section .quadro_info{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .segunda_section .quadro_info .Imagem_1 img{
+        width: 100%;
+        height: 160px;
+    }
+    .segunda_section .Texto_card{
+        position: relative;
+        width: 100%;
+        height: 160px;    
+        left: 5px;
+    }
+    .segunda_section .quadro_info #img_3 img{
+        position: relative;
+        left: 0;
+        
+    }
+    .segunda_section .Texto_card p{
+        position: relative;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:500px){
+    .segunda_section{
+        position: relative;
+        top: 860px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+}
+/*------------------------------------Fim Segunda Sessa---------------------------------------*/
+/*############################################################################################*/
+
+/*--------------------------------------Terceira sessao-------------------------------*/
+.tereira_section{
+    position: relative;
+    top: 1300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
+/*___________________________Animaçao_______________________________*/
+
+section .animate{
+    transition: 2s;
+}
+
+.tereira_section .animate{
+    transform: translateX(-100%);
+
+}
+
+.tereira_section.show-animate .animate{
+    transform: translateX(0);
+    
+}
+.texto_2.animate{
+    transform: translateX(100%);
+}
+.Content_celula.animate{
+    transform: translateX(-100%);   
+}
+/*___________________________ Fim Animaçao_______________________________*/
+.content_{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+    width: 100%;
+}
+.tereira_section .imagem_placar_ {
+    width: 100%; /* Largura total do container */
+    height: auto; /* Altura automática para manter a responsividade */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.tereira_section .imagem_placar_ .custom-height {
+    width: 100%;
+    height: 386px; /* Ajuste a altura conforme necessário */
+    object-fit: cover; /* Garante que a imagem se ajuste ao container sem distorção */
+}
+
+.tereira_section .content_ .texto_2{
+    top: 120px;
+} 
+.tereira_section .content_ .texto_2 p h3{
+    font-size: 23px;
+    font-weight: 500;
+    font-style: unset;
+} 
+.tereira_section .content_ .Two_image_{
+    position: relative;
+    gap: 20px;
+    top: 200px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin: 0 auto;
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+.tereira_section .content_ .Two_image_ img{
+    width: 100%;
+    height: 240px;
+}
+.tereira_section .tabela_precario_{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 400px;
+    gap: 40px;
+}
+.tereira_section .tabela_precario_ label p{
+    font-size: 25px;
+    font-weight: unset;
+    color: rgba(92, 66, 30, 0.823);
+}
+.tereira_section .tabela_precario_ .Celulas_Box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    border-bottom: 1px solid rgba(92, 66, 30, 0.823);
+    padding-bottom: 20px;
+    width: 100%;
+}
+.tereira_section .tabela_precario_ .Celulas_Box .Content_celula{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 260px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.25);
+}
+.tereira_section .tabela_precario_  .Button_fornecedor button{
+    width: 120px;
+    height: 30px;
+    background-color: rgba(92, 66, 30, 0.823);
+    border-radius: 30px;
+    color: white;
+    border-style: none;
+    cursor: pointer;
+}
+.tereira_section .tabela_precario_ .Celulas_Box .Content_celula ul li a{
+    text-decoration: none;
+    font-size: 17px;
+    color: rgb(92, 78, 31);
+}
+.tereira_section .tabela_precario_ .Celulas_Box .Content_celula ul li{
+    list-style: none;
+}
+.tereira_section .tabela_precario_ .Celulas_Box .Content_celula #titulo{
+    position: relative;
+    color: rgb(92, 78, 31);
+    top: -8px;
+    font-size: 19px;
+}
+/*---------------------------------Responsividade da terceira sessao-------------------------------*/
+@media screen  and (max-width:548px){
+    .tereira_section .content_ .Two_image_{
+        position: relative;
+        gap: 20px;
+        top: 200px;
+        padding-bottom: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        margin: 0 auto;
+        grid-gap: 20px;
+        padding: 10px;
+    }
+    
+}
+@media screen and (max-width:500px){
+    .tereira_section{
+        position: relative;
+        top: 1000px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }   
+}
+@media screen and (max-width:696px){
+    .tereira_section .tabela_precario_ .Celulas_Box .Content_celula{
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(1, 2fr);
+        width: 100%;
+        height: 290px;
+
+    }
+    .tereira_section .tabela_precario_ .Celulas_Box{
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(1, 2fr);
+        width: 100%;
+        height: auto;
+    }
+
+}
+/*-----------------------------------Fim Terceira sessao---------------------------------------*/
+/*################################################################################################*/
+/*-----------------------------------------Quarta sessao-------------------------------*/
+.quarta_section_{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 1700px;
+    gap: 150px;
+}
+.quarta_section_ .Big_pata_{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.quarta_section_ .Big_pata_ .redi-image{
+    width: 500px;
+    height: 480px;
+}
+.quarta_section_ .Text_Big_pata_{
+    border-bottom: 1px solid rgba(92, 66, 30, 0.823);
+    padding-bottom: 20px;
+}
+/*---------------------------------Responsividade da Segunda sessao-------------------------------*/
+@media screen and (max-width:501px){
+    .quarta_section_{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: 1600px;
+        gap: 150px;
+    }
+}
+/*----------------------------------------Fim Quarta sessao---------------------------------------*/
+/*################################################################################################*/
+/*-----------------------------------------------Footer-------------------------------------------*/
+.footer{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+    gap: 3.5rem;
+    background-color: rgba(92, 66, 30, 0.823);
+    position: absolute;
+    height: 300px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 80px 13% 70px; 
+    top: 6490px;
+}
+.footer-content h4{
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+}
+
+.footer-content li{
+    margin-bottom: 16px;
+}
+
+.footer-content li a{
+    display: block;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all .40s ease;
+    text-decoration: none;
+   
+}
+.footer-content li a:hover{
+    transform: translateY(-7px);
+    color: #fff;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-radius:5px;
+
+
+}
+
+.footer-content p{
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 20px 0; 
+}
+
+.icons a{
+    display: inline-block;
+    font-size: 22px;
+    color: #ffffff;
+    margin-right: 17px;
+    transition: all .40s ease;
+
+}
+
+.icons a:hover{
+    color: #fff;
+    transform: translateY(-5px);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-radius:5px;
+
+}
+
+/*---------------------------------------Responsividade do Footer---------------------------------*/
+@media (max-width:1690px) {
+    section{
+        padding: 50px 5% 40px; 
+    }
+
+}
+@media screen and (max-width:969px) {
+    .footer{
+        position: relative;
+        top: 2000px;
+        height: auto;
+    }
+    
+}
+
+
+@media (max-width:709px) {
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+        gap: 2.5rem;
+        top: 1800px;
+        height: auto;
+       }
+ }
+ @media (max-width:587px) {
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 2.5rem;
+        height: auto;
+        top: 1870px;
+       }
+ }
+/*------------------------------------------------Fim---------------------------------------------*/
